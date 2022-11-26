@@ -1,7 +1,7 @@
 {
-  "name": "text",
+  "name": "TEXTR",
   "version": "0.0.1",
-  "description": "Text",
+  "description": "TEXTR",
   "main": "app.ts",
   "scripts": {
     "build": "NODE_ENV=development webpack --mode development",
@@ -49,19 +49,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiefmikey/text.git"
+    "url": "git+https://github.com/chiefmikey/textr.git"
   },
-  "homepage": "https://github.com/chiefmikey/text#readme",
+  "homepage": "https://github.com/chiefmikey/textr#readme",
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)",
   "bugs": {
-    "url": "https://github.com/chiefmikey/text/issues"
+    "url": "https://github.com/chiefmikey/textr/issues"
   },
-  "keywords": [
-    "text"
-  ],
-  "contributors": [
-    "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"
-  ],
+  "keywords": ["textr"],
+  "contributors": ["Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"],
   "prettier": "@mikey-pro/prettier-config",
   "eslintConfig": {
     "extends": "@mikey-pro/eslint-config"

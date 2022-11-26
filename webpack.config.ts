@@ -6,7 +6,6 @@ const SRC_DIR = path.join(path.resolve(), '/client/src');
 const DIST_DIR = path.join(path.resolve(), '/docs/public/dist');
 
 const css = ['style-loader', 'css-loader'];
-const scss = ['style-loader', 'css-loader', 'sass-loader'];
 
 const config: Configuration = {
   entry: `${SRC_DIR}/index.ts`,
@@ -32,7 +31,6 @@ const config: Configuration = {
                     },
                   },
                 ],
-                '@babel/preset-react',
                 ['@babel/preset-typescript', { jsxPragma: 'h' }],
               ],
               plugins: [
@@ -40,7 +38,7 @@ const config: Configuration = {
                   '@babel/plugin-transform-react-jsx',
                   {
                     pragma: 'h',
-                    pragmaFrag: 'Fragment',
+                    pragmaFrag: 'DocumentFragment',
                   },
                 ],
               ],
@@ -53,10 +51,6 @@ const config: Configuration = {
         use: css,
       },
       {
-        test: /\.s[ac]ss$/,
-        use: scss,
-      },
-      {
         test: /\.(png|ttf|jp(e*)g|svg)$/,
         use: 'url-loader?limit=100000&name=img/[name].[ext]',
       },
@@ -64,12 +58,6 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.vue', '.json', '...'],
-    alias: {
-      react: 'preact/compat',
-      'react-dom/test-utils': 'preact/test-utils',
-      'react-dom': 'preact/compat',
-      'react/jsx-runtime': 'preact/jsx-runtime',
-    },
   },
   experiments: {
     topLevelAwait: true,
