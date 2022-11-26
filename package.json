@@ -6,10 +6,10 @@
   "scripts": {
     "build-dev": "NODE_ENV=development webpack --mode development -w",
     "build-prod": "NODE_ENV=production webpack --mode production",
-    "start": "ts-node docs/client/app.ts",
-    "nodemon": "nodemon docs/client/app.ts",
-    "dev": "npm run build-dev && npm run nodemon",
-    "prod": "npm run build-prod && npm run start"
+    "start": "ts-node client/app.ts",
+    "nodemon": "nodemon client/app.ts",
+    "dev": "npm run build-dev & npm run nodemon",
+    "prod": "npm run build-prod & npm run start"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
