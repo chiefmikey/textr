@@ -4,9 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const App = () => {
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(false);
+  const [copy, setCopy] = useState('');
   const mainState = useSelector((state) => state);
-  return <></>;
+
+  useEffect(() => {
+    setCopy('TEXTR');
+  }, []);
+
+  return (
+    <div>
+      <h1>{copy}</h1>
+    </div>
+  );
 };
 
 export default App;
