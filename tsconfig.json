@@ -23,8 +23,7 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
-      "types": ["react/next", "react-dom/next"]
+      "module": "CommonJS"
     },
   },
   "exclude": ["node_modules", "**/*.spec.ts"]

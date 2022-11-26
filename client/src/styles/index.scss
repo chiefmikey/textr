@@ -1,87 +1,378 @@
-html,
-body,
-#app {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+$base: #9a9a9a;
+$background: #f5f3f0;
+$bannertext: rgba(250, 250, 250, 1);
+$darkbrown: #3e2a1a;
+$brown: #c89e72;
+$banner: rgba(200, 158, 114, 0.75);
+$width: 1200px;
+$title: 'Oswald', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $base;
+  font-family: Roboto, sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  min-width: $width;
+  font-family: $body;
+}
+
+.app-container {
+  display: flex;
+  width: $width;
+  flex-direction: column;
+  background-color: $background;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.logo {
+  z-index: 1;
+  width: 333px;
+  height: 150px;
+  margin: 30px 0;
+  user-select: none;
+}
+
+.nav-container {
   display: flex;
   width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: $font-weight-normal;
-  color: #fafafa;
-  text-align: center;
+  height: 90px;
   flex-direction: column;
-  user-select: none;
-  background: #292c2e;
-  align-items: stretch;
-  -webkit-font-smoothing: antialiased;
-  touch-action: none;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  user-select: none;
+.nav-divider, .footer-divider {
+  width: 666px;
+  height: 1px;
+  margin-bottom: 20px;
+  background-color: $body;
 }
 
-ul {
-  padding: 0;
-}
-
-h1 {
-  margin-bottom: calc(0.5vmin + 0.5vh);
-  font-size: calc(2vmin + 2vw);
-  font-weight: 100;
-  letter-spacing: 5px;
-}
-
-h5 {
-  font-size: calc(2.2vmin + 2.2vh);
-  line-height: 100%;
-  text-align: left;
-  user-select: none;
-  transform: rotate(-60deg);
-  touch-action: none;
-}
-
-h6 {
-  font-size: calc(2vmin + 2vw);
-  font-weight: $font-weight-normal;
-  line-height: 80%;
-  text-align: left;
-}
-
-button {
+.nav-buttons-container {
   display: flex;
-  margin: calc(0.5vmin + 0.5vh);
-  overflow: hidden;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: calc(3.2vmin + 3.2vw);
-  font-weight: $font-weight-bold;
-  color: #fafafa;
-  text-align: center;
-  cursor: pointer;
+  width: 1100px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-button {
+  font-size: 16px;
+}
+
+.home-container {
+  display: flex;
+  width: 100%;
   flex-direction: column;
-  user-select: none;
-  background: none;
-  border: none;
-  outline: none;
-  opacity: 0.69;
-  touch-action: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-banner {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-
-#main {
+.home-banner-color {
+  width: 100%;
+  height: 100%;
+  background-color: $banner;
   display: flex;
-  width: 100vw;
-  min-width: 355px;
-  height: 100vh;
-  min-height: 355px;
-  padding: calc(1vmin + 1vh);
   flex-direction: column;
-  transform-origin: center;
   align-items: center;
+  justify-content: center;
+}
+
+.home-banner-text {
+  background-color: $bannertext;
+  width: 600px;
+  height: 250px;
+  font-family: $title;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-banner-line-1 {
+  font-size: 35px;
+  font-weight: 400;
+  color: $brown;
+  line-height: 30px;
+}
+
+.home-banner-line-2 {
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: $darkbrown;
+}
+
+.home-banner-line-3 {
+  font-size: 20px;
+  color: $base;
+  font-weight: 100;
+}
+
+.home-read-more {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-read-more-line-1 {
+  margin: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  height: 80px;
+}
+
+.home-read-more-arrow {
+  font-size: 50px;
+  margin: 0 20px 0 20px;
+  background-color: transparent;
+  color: $darkbrown;
+}
+
+.home-read-more-text {
+  font-size: 30px;
+  height: 100%;
+  font-weight: bold;
+  background-color: $brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  align-items: center;
+}
+
+.home-read-more-line-2 {
+  font-size: 20px;
+  margin: 30px 0 30px 0;
+}
+
+.home-read-more-button {
+  font-size: 20px;
+  background-color: $darkbrown;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  width: 200px;
+  color: $background;
+}
+
+.home-read-more-button:hover {
+  background-color: $base;
+  cursor: pointer;
+}
+
+.home-talent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  padding: 40px;
+}
+
+.home-slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+.home-slider-card-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.instructions-container, .gluten-free-container, .in-the-news-container, .community-container {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  word-break: break-all;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.instructions-button, .gluten-free-button, .in-the-news-button, .community-button {
+  width: 20%;
+  height: 150px;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  word-break: keep-all;
+  background-color: $brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10%;
+}
+
+.instructions-button:hover, .gluten-free-button:hover, .in-the-news-button:hover, .community-button:hover {
+  background-color: $brown;
+}
+
+.instructions-button-title, .gluten-free-button-title, .in-the-news-button-title, .community-button-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: $background;
+  margin: 5px 0 10px 0;
+}
+
+.instructions-button-description, .gluten-free-button-description, .in-the-news-button-description, .community-button-description {
+  font-size: 18px;
+  font-weight: 200;
+  color: $background;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-line-1 {
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  padding: 5px 10px 0px 10px;
+  font-family: $title;
+}
+
+.footer-line-2 {
+  font-family: $title;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.footer-email-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer-email-signup-input {
+  background-color: $body;
+  height: 40px;
+  width: 400px;
+  border:1px solid $darkbrown;
+  margin-bottom: 10px;
+  font-weight: 200;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.footer-email-signup-input:placeholder-shown {
+  color: $base;
+}
+
+.footer-email-signup-input:placeholder-shown:focus {
+  color: transparent;
+}
+
+.footer-email-signup-button {
+  font-size: 20px;
+  background-color: $darkbrown;
+  height: 40px;
+  width: 400px;
+  padding: 15px;
+  font-weight: 400;
+  font-family: $title;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid $darkbrown;
+  justify-content: center;
+  color: $background;
+}
+
+.footer-email-signup-button:hover {
+  background-color: $base;
+  border:1px solid $base;
+  cursor: pointer;
+}
+
+.footer-social-links{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.footer-line-3 {
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: $title;
+}
+
+.footer-line-4 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  font-family: $title;
+  font-weight: 400;
+}
+
+.footer-line-5 {
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.footer-line-6 {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 5px;
 }
