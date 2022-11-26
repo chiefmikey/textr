@@ -6,9 +6,10 @@ const SRC_DIR = path.join(path.resolve(), '/client/src');
 const DIST_DIR = path.join(path.resolve(), '/docs/public/dist');
 
 const css = ['style-loader', 'css-loader'];
+const scss = ['style-loader', 'css-loader', 'sass-loader'];
 
 const config: Configuration = {
-  entry: `${SRC_DIR}/index.ts`,
+  entry: `${SRC_DIR}/index.tsx`,
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
@@ -31,16 +32,8 @@ const config: Configuration = {
                     },
                   },
                 ],
-                ['@babel/preset-typescript', { jsxPragma: 'h' }],
-              ],
-              plugins: [
-                [
-                  '@babel/plugin-transform-react-jsx',
-                  {
-                    pragma: 'h',
-                    pragmaFrag: 'DocumentFragment',
-                  },
-                ],
+                ['@babel/preset-react', { runtime: 'automatic' }],
+                '@babel/preset-typescript',
               ],
             },
           },
@@ -49,6 +42,10 @@ const config: Configuration = {
       {
         test: /\.css$/,
         use: css,
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: scss,
       },
       {
         test: /\.(png|ttf|jp(e*)g|svg)$/,
