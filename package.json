@@ -12,7 +12,7 @@
     "prod": "npm run build-prod & npm run start"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "@types/react-redux": "^7.1.24",
     "airbnb-browser-shims": "^3.3.0",
     "koa": "^2.13.4",
